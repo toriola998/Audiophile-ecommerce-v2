@@ -3,7 +3,3 @@
 @import 'tailwindcss/utilities';
 @import './common.scss';
 @import './button-link.scss';
-/* 
-@tailwind base;
-@tailwind components;
-@tailwind utilities; */
