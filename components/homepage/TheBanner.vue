@@ -7,6 +7,10 @@
 </template>
 
 <style scoped>
+  header {
+
+  }
+
   h1, p { 
    @apply text-center text-light;
   }
