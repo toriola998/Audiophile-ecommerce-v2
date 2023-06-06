@@ -16,8 +16,15 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      
-    }
+      'deep-orange': '#D87D4A',
+      'light-orange': '#FBAF85',
+      'dark': '#101010',
+      'grey-1': '#F1F1F1',
+      'grey-2': '#FAFAFA',
+    },
+    // fontFamily: {
+    //   sans: ['Manrope', 'sans-serif'],
+    // },
   },
   plugins: [],
 }
