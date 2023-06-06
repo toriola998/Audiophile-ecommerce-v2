@@ -3,7 +3,10 @@
         <div class="container">
         <div class="max-w-[379px] mx-auto lg:mx-[unset]">
             <p class="opacity-50 tracking-[0.62rem]">NEW PRODUCT</p>
-            <h1 class="font-bold uppercase text-[2.3rem] md:text-[3.35rem] leading-10 md:leading-[3.5rem] mt-4 mb-6">XX99 Mark II<br> HeadphoneS</h1>
+            <h1 class="font-bold uppercase text-[2.3rem] md:text-[3.35rem] leading-10 md:leading-[3.5rem] mt-4 mb-6"
+            >
+            XX99 Mark II<br> HeadphoneS
+            </h1>
             <p class="opacity-75 mb-7">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
             <div class="flex justify-center lg:justify-start">
                 <SharedButtonLink cta-link="/" cta-text="SEE PRODUCT" class="orange btn-link"/>
