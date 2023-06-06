@@ -1,7 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import './common.css'
+@import './common.scss';
+@import './button-link.scss';
 /* 
 @tailwind base;
 @tailwind components;

@@ -1,0 +1,12 @@
+.btn-link {
+    @apply text-[.81rem] font-bold px-8 py-4;
+
+    &.outlined-black {
+        border: 1px border black;
+        color: black;
+    }
+
+    &.orange {
+        @apply bg-deep-orange text-light;
+    }
+}

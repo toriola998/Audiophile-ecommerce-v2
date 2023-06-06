@@ -1,7 +1,16 @@
 <template>
-    <NuxtLink></NuxtLink>
+    <NuxtLink :to="ctaLink" class="btn-link">{{ ctaText }}</NuxtLink>
 </template>
 
-<script setup>
-
+<script setup lang="ts">
+defineProps({
+    ctaLink:{
+        type: String,
+        default: '',
+    },
+    ctaText:{
+        type: String,
+        default: '',
+    },
+})
 </script>
