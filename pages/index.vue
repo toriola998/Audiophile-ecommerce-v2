@@ -1,7 +1,5 @@
 <template>
-    <div class="pt-40 container mx-auto bg-gray-300 p-8">
-        <h1>Hello Worrldd</h1>
-    </div>
+   <HomepageTheBanner />
 </template>
 
 <style scoped>
