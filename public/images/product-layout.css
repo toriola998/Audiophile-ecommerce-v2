@@ -1,0 +1,137 @@
+.wrap1 {
+    padding: 2rem 1.5rem 4rem;
+}
+
+.headphone {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+.wrap1 .desc, 
+.new,
+.wrap1 h2 {
+    text-align: center;
+}
+
+.new {
+    color: #D87D4A;
+    letter-spacing: 5px;
+    font-size: .9rem;
+    margin: 1rem 0;
+}
+
+.wrap1 h2 {
+    font-size: 1.7rem;
+    margin: 1.5rem auto;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.wrap1 .desc {
+    color: #000;
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 520px) {
+    .headphone {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .headphone {
+        width: 100%;
+    }
+
+    .wrap1 .desc, 
+    .new {
+        padding: 0rem 6rem;
+    }
+
+    .wrap1 h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .products-container {
+        padding: 3rem 6rem 0rem;
+    }
+
+    .wrap1 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        column-gap: 3rem;
+        grid-template-columns: 50% 52%;
+    }
+
+    .wrap1 .desc,
+    .new{
+        padding: unset;
+    }
+
+    .wrap1 h2, 
+    .button {
+        margin: initial;
+    }
+
+    .headphone-product-name {
+        width: 250px;
+    }
+
+    .speaker-product-name {
+        width: 200px;
+    }
+
+    .earphone-product-name {
+        width: 300px;
+    }
+
+    .headphone {
+        margin: unset;
+    }
+
+    .wrap1 .desc, 
+    .new,
+    .wrap1 h2 {
+        text-align: initial;
+    }
+
+    .wrap1 h2 {
+        margin: 1rem 0;
+        font-size: 2.2rem;
+    }
+
+    .new {
+        margin-bottom: .5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .products-container {
+        padding: 6rem 10rem 0;
+    }
+
+    .wrap1 {
+        column-gap: 5rem;
+        grid-template-columns: 50% 47%;
+    }
+
+    .wrap1 h2 {
+        margin: 1rem 0 2rem;
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .wrap1 {
+        max-width: 1300px;
+        margin: auto;
+    }
+}
