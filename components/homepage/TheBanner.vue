@@ -1,5 +1,5 @@
 <template>
-    <header class="px-5">
+    <header class="px-5 bg-dark-1">
         <div class="container">
         <div class="max-w-[379px] mx-auto lg:mx-[unset]">
             <p class="opacity-50 tracking-[0.62rem]">NEW PRODUCT</p>
@@ -17,11 +17,11 @@
 </template>
 
 <style scoped lang="scss">
-  header {
-    @apply h-[500px] bg-cover bg-center bg-no-repeat flex items-center bg-black
+  .container {
+    @apply h-[500px] bg-cover bg-center bg-no-repeat flex items-center bg-dark-1
     bg-[url('/images/home/mobile/image-header.jpg')] 
     md:h-[600px] md:bg-[url('/images/home/tablet/image-header.jpg')] 
-    lg:bg-[url('/images/home/desktop/image-hero.jpg')];
+    lg:h-[650px] lg:bg-[url('/images/home/desktop/image-hero.jpg')];
 
     h1, p { 
       @apply text-center text-light lg:text-start;
