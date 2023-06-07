@@ -1,8 +1,8 @@
 .btn-link {
-    @apply text-[.81rem] font-bold px-8 py-4;
+    @apply text-[.81rem] font-bold px-8 py-4 flex justify-center;
 
     &.outlined-black {
-        border: 1px border black;
+        border: 2px solid black;
         color: black;
     }
 
