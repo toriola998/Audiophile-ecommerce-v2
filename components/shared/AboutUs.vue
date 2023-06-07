@@ -1,6 +1,6 @@
 <template>
     <section class="about-us px-5">
-        <div class="container flex flex-col gap-10 lg:flex-row-reverse lg:items-center">
+        <div class="container flex flex-col gap-10 lg:flex-row-reverse lg:items-center lg:justify-between">
             <picture>
                 <source media="(min-width: 1000px)" 
                         srcset="/images/shared/desktop/image-best-gear.jpg">
@@ -11,7 +11,7 @@
                         class="rounded-lg"
                         role="presentation">
             </picture>
-            <div class="max-w-[570px] mx-auto lg:max-w-[unset] lg:w-[50%] xl:w-[40%]">
+            <div class="max-w-[570px] mx-auto lg:mx-[unset] lg:max-w-[unset] lg:w-[50%] xl:w-[40%]">
                 <h2 class="uppercase font-bold text-[1.75rem] md:text-[2.2rem] mb-8">Bringing you the<br>
                     <span class="text-deep-orange">best</span> audio gear
                 </h2>
