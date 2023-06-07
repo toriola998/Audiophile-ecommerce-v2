@@ -1,5 +1,5 @@
 <template>
-    <section class="about-us px-5">
+    <section class="about-us px-5 pb-32">
         <div class="container flex flex-col gap-10 lg:flex-row-reverse lg:items-center lg:justify-between">
             <picture>
                 <source media="(min-width: 1000px)" 

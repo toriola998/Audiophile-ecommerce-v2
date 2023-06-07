@@ -13,6 +13,15 @@
     </section>
 </template>
 
+<script setup lang="ts">
+defineProps({
+    product:{
+        type: Object,
+        default: () => {},
+    },
+})
+</script>
+
 <style scoped lang="scss">
 .each-product {
     h2, p {
