@@ -7,4 +7,5 @@
       <HomepageYX1Earphones />
       <SharedAboutUs class="my-32" />
    </main>
+   <SharedTheFooter />
 </template>
