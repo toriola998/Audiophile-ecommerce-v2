@@ -1,4 +1,7 @@
 <template>
    <HomepageTheBanner />
-   <SharedProductCategory />
+   <main>
+      <SharedProductCategory />
+      <HomepageZX9Speaker />
+   </main>
 </template>

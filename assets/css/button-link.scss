@@ -9,4 +9,8 @@
     &.orange {
         @apply bg-deep-orange text-light;
     }
+
+    &.black {
+        @apply bg-black text-light;
+    }
 }

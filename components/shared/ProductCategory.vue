@@ -1,6 +1,6 @@
 <template>
     <section aria-label="Categories of our products" class="px-5 py-20 md:py-28 lg:py-32">
-        <div class="flex flex-col gap-16 sm:flex-row sm:gap-3">
+        <div class="flex flex-col gap-16 sm:flex-row sm:gap-3 lg:gap-10 container">
             <div class="bg-grey-1 py-3 pt-20 rounded-lg relative sm:w-[33%]"
                 v-for="(item, index) in products"
                 :key="index">
