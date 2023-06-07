@@ -15,6 +15,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    screens: {
+      xl: '1200px',
+    },
     colors: {
       'deep-orange': '#D87D4A',
       'light-orange': '#FBAF85',

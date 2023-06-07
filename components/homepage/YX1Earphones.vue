@@ -8,7 +8,7 @@
                         srcset="/images/home/tablet/image-earphones-yx1.jpg">
                 <img src="/images/home/mobile/image-earphones-yx1.jpg" 
                         alt="YZ1 earphones"
-                        class="rounded-lg">
+                        class="rounded-lg w-full">
             </picture> 
             <div class="bg-grey-1 rounded-lg px-7 py-10 flex items-center">
                 <div>
