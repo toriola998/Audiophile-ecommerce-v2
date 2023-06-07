@@ -1,10 +1,10 @@
 <template>
-    <section class="zx7-speaker px-5 my-8">
+    <section class="zx7-speaker px-5 my-7">
         <div class="container">
-            <div class="flex flex-col gap-8">
-            <h2 class="text-[1.75rem] font-bold">ZX7 SPEAKER</h2>
-            <SharedButtonLink cta-link="/" cta-text="SEE PRODUCT" class="outlined-black btn-link"/>
-        </div>
+            <div>
+                <h2 class="text-[1.75rem] font-bold mb-7">ZX7 SPEAKER</h2>
+                <SharedButtonLink cta-link="/" cta-text="SEE PRODUCT" class="outlined-black btn-link"/>
+            </div>
         </div>
     </section>
 </template>
