@@ -14,10 +14,10 @@ module.exports = {
     `./app.config.{js,ts}`
   ],
   theme: {
+    // screens: {
+    //   'xl': '1200px',
+    // },
     extend: {},
-    screens: {
-      xl: '1200px',
-    },
     colors: {
       'deep-orange': '#D87D4A',
       'light-orange': '#FBAF85',
@@ -28,9 +28,6 @@ module.exports = {
       'grey-1': '#F1F1F1',
       'grey-2': '#FAFAFA',
     },
-    // fontFamily: {
-    //   sans: ['Manrope', 'sans-serif'],
-    // },
   },
   plugins: [],
 }
