@@ -8,9 +8,9 @@
 
 <script setup lang="ts">
 defineProps({
-    title:{
+    title: {
         type: String,
-        default: '',
+        default: 'PRODUCT',
     },
 })
 </script>
