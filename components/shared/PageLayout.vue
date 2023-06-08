@@ -1,8 +1,13 @@
 <template>
-    <main>
-        <slot></slot>
-        <SharedProductCategory />
-        <SharedAboutUs />
-    </main>
-    <SharedTheFooter />
+    <div class="bg-grey-2">
+        <header>
+            <slot name="header"></slot>
+        </header>
+        <main>
+            <slot></slot>
+            <SharedProductCategory />
+            <SharedAboutUs />
+        </main>
+        <SharedTheFooter />
+    </div>
 </template>

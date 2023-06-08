@@ -1,13 +1,15 @@
 <template>
-    <ProductTheHeader :title="category" />
-    <main class="bg-grey-2">
-        <div class="px-5 pt-10 lg:pt-24" v-for="(item, index) in products" :key="index">
-            <ProductTheProduct class="container" :product="item" :class="{'flex-row-reverse': index % 2 }"/>
+    <SharedPageLayout>
+        <template #header>
+            <ProductTheHeader :title="category" />
+        </template>
+
+        <div>
+            <div class="px-5 pt-10 lg:pt-24" v-for="(item, index) in products" :key="index">
+                <ProductTheProduct class="container" :product="item" :class="{'flex-row-reverse': index % 2 }"/>
+            </div>
         </div>
-        <SharedProductCategory />
-        <SharedAboutUs />
-    </main>
-    <SharedTheFooter />
+    </SharedPageLayout>
 </template>
 
 <script setup>
