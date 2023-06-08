@@ -11,6 +11,6 @@ defineProps({
     title: {
         type: String,
         default: 'PRODUCT',
-    },
+    }
 })
 </script>

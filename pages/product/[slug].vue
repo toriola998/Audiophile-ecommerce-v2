@@ -1,8 +1,8 @@
 <template>
-    <ProductTheHeader />
+    <ProductTheHeader :title="category" />
     <main class="bg-grey-2">
         <div class="px-5 pt-10 lg:pt-24" v-for="(item, index) in products" :key="index">
-            <ProductTheProduct class="container" :product="item"/>
+            <ProductTheProduct class="container" :product="item" :class="{'flex-row-reverse': index % 2 }"/>
         </div>
         <SharedProductCategory />
         <SharedAboutUs />
@@ -10,15 +10,15 @@
     <SharedTheFooter />
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 import data from '~/data.json'
 
 const pageData = ref(data).value
-console.log(pageData)
 
 const route = useRoute();
 const { slug } = route.params
+const category = slug
 
 const products = pageData.map(item => {
   if (item.category === slug) {
@@ -27,5 +27,5 @@ const products = pageData.map(item => {
   return null;
 }).filter(item => item !== null);
 
-console.log(slug, products)
+console.log(category, typeof category)
 </script>
