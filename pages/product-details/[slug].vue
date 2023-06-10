@@ -1,7 +1,7 @@
 <template>
    <SharedPageLayout>
         <template #header>
-            <button class="opacity-50 my-4 text-[15px]" @click="$router.back()">Go back</button>
+            <button class="opacity-50 my-4 text-[15px] px-5 lg:my-10" @click="$router.back()">Go back</button>
             <div v-for="(item, index) in products" :key="index">
                 <ProductDetailsTheBanner :product="item"/>
                 <ProductFeatures :product="item"/>

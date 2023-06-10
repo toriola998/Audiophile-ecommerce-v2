@@ -4,7 +4,7 @@
             <picture class="md:w-[45%]">
                 <source media="(min-width: 1000px)" 
                         :srcset="`/images/${product.image.desktop}`">
-                <source media="(min-width: 500px)" 
+                <source media="(min-width: 768px)" 
                         :srcset="`/images/${product.image.tablet}`">
                 <img :src="`/images/${product.image.mobile}`" 
                         :alt="product.name"

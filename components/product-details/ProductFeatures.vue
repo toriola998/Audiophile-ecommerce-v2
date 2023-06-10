@@ -17,10 +17,10 @@
                 </div>
             </div>
 
-            <div class="gallery">
+            <div class="gallery flex flex-col gap-5 lg:gap-7 md:block mt-28">
                 <picture v-for="(item, key) in product.gallery" :key="key">
                     <source media="(min-width: 1000px)" :srcset="`/images/${item.desktop}`">
-                    <source media="(min-width: 630px)" :srcset="`/images/${item.tablet}`">
+                    <source media="(min-width: 700px)" :srcset="`/images/${item.tablet}`">
                     <img :src="`/images/${item.mobile}`" alt="" class="rounded-lg">
                 </picture>
             </div>
@@ -41,6 +41,30 @@ defineProps({
 .features{
     h2, h3 {
         @apply text-[1.5rem] md:text-[2rem] mb-7 font-bold;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .gallery {
+        display: grid; 
+
+        img { 
+            width: 100%; 
+            height: 100%;
+        }  
+        
+        picture:nth-child(1) {
+            grid-row: 1/2;
+        }
+
+        picture:nth-child(2) {
+            grid-row: 2/3;
+        }
+
+        picture:nth-child(3) {
+            grid-column: 2/3;
+            grid-row: 1/3;
+        }
     }
 }
 </style>
