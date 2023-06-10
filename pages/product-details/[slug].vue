@@ -3,7 +3,8 @@
         <template #header>
             <button class="opacity-50 my-4 text-[15px]" @click="$router.back()">Go back</button>
             <div v-for="(item, index) in products" :key="index">
-              <ProductDetailsTheBanner :product="item"/>
+                <ProductDetailsTheBanner :product="item"/>
+                <ProductFeatures :product="item"/>
             </div>
         </template>
    </SharedPageLayout>
