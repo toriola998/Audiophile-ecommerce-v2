@@ -5,6 +5,7 @@
             <div v-for="(item, index) in products" :key="index">
                 <ProductDetailsTheBanner :product="item"/>
                 <ProductFeatures :product="item"/>
+                <ProductDetailsOtherProducts :product="item"/>
             </div>
         </template>
    </SharedPageLayout>
