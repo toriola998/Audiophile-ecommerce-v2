@@ -1,0 +1,29 @@
+.checkout {
+    label {
+        @apply font-bold text-[0.75rem];
+    }
+    
+    input {
+        &:focus,
+        &:hover {
+            outline: 1px solid #D87D4A;
+        }
+
+        &::placeholder {
+            @apply text-sm opacity-40 font-bold;
+            color: black;
+    }
+   }
+}
+
+.title {
+    @apply text-deep-orange font-bold text-[0.82rem] mb-4;
+}
+
+.input-wrap {
+    @apply pl-6 py-3 rounded-md mt-2 w-full;
+    border: 1px solid #CFCFCF;
+}
+
+
+ 
