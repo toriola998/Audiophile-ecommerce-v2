@@ -23,10 +23,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    @apply fixed px-5 top-0 left-0 right-0 bottom-0 z-10;
-}
-</style>

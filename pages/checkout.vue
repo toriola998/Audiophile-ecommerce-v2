@@ -7,14 +7,14 @@
                     <h1 class="text-[1.5rem] md:text-[2rem] pb-7 font-bold">CHECKOUT</h1>
                     
                     <p class="title">BILLING DETAILS</p>
-                    <CheckoutDetails :details="billingDetails" class="md:grid grid-cols-2 gap-x-4"/>
+                    <CheckoutDetails :details="billingDetails" class="sm:grid grid-cols-2 gap-x-4"/>
 
                     <p class="title">SHIPPING INFO</p>
                     <CheckoutDetails :details="shippingInfo" class="shipping-info"/>
                     
                     <div class="mb-8">
                         <p class="title">PAYMENT DETAILS</p>
-                        <div class="md:grid grid-cols-2 justify-between gap-x-4">
+                        <div class="sm:grid grid-cols-2 justify-between gap-x-4">
                             <p class="font-bold text-[0.75rem] my-4">Payment Methods</p>
                             <div>
                                 <div class="mb-4 items-center flex gap-2 input-wrap " v-for="(item, index) in paymentDetails" :key="index">
@@ -24,9 +24,9 @@
                             </div>
                         </div>
 
-                        <CheckoutDetails :details="paymentMethods" class="md:grid grid-cols-2 gap-x-4 mt-2"/>
+                        <CheckoutDetails :details="paymentMethods" class="sm:grid grid-cols-2 gap-x-4 mt-2"/>
 
-                        <div class="flex flex-col gap-3 mt-8 sm:flex-row md:gap-8 md:items-center">
+                        <div class="flex flex-col gap-3 mt-8 sm:flex-row sm:gap-8 sm:items-center">
                             <img src="/images/Shape.png" alt="" role="presentation" height="48" width="48" />
                             <p class="opacity-50 text-[.95rem]">The 'Cash on Delivery' option enables you to pay in cash when our delivery 
                             courier arrives at your residence. Just make sure your address is correct so 
@@ -144,6 +144,6 @@ div.input-wrap {
 }
 
 .shipping-info {
-    @apply md:grid grid-cols-2 gap-x-4;
+    @apply sm:grid grid-cols-2 gap-x-4;
 }
 </style>
