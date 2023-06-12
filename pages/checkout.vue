@@ -18,8 +18,8 @@
                             <p class="font-bold text-[0.75rem] my-4">Payment Methods</p>
                             <div>
                                 <div class="mb-4 items-center flex gap-2 input-wrap " v-for="(item, index) in paymentDetails" :key="index">
-                                    <input id="" type="radio" class="radio-input"/>
-                                    <label for="" class="font-bold text-sm">{{ item.label }}</label><br>
+                                    <input :id="item.id" type="radio" class="radio-input"/>
+                                    <label :for="item.id" class="font-bold text-sm">{{ item.label }}</label><br>
                                 </div>
                             </div>
                         </div>
