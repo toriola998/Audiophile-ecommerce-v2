@@ -2,9 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import './common.scss';
+@import './font.scss';
 @import './checkout.scss';
 @import './button-link.scss';
-
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */

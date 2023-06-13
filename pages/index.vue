@@ -1,4 +1,5 @@
 <template>
+   <SharedNavBar />
    <HomepageTheBanner />
    <main>
       <SharedProductCategory />

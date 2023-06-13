@@ -20,7 +20,7 @@
   .container {
     @apply h-[500px] bg-cover bg-center bg-no-repeat flex items-center bg-dark-1
     bg-[url('/images/home/mobile/image-header.jpg')] 
-    md:h-[600px] md:bg-[url('/images/home/tablet/image-header.jpg')] 
+    sm:h-[650px] sm:bg-[url('/images/home/tablet/image-header.jpg')] 
     lg:h-[650px] lg:bg-[url('/images/home/desktop/image-hero.jpg')];
 
     h1, p { 
