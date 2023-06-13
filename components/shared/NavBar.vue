@@ -22,21 +22,12 @@
         </div>
         
         <!--MOBILE NAV LINKS--->
-        <div class="nav-bar z-40 relative">
-            <SharedProductCategory class="bg-light absolute w-full right-0 left-0 rounded-b-lg"/>
+        <div class="md:hidden">
+            <div class="overlay"></div>
+            <SharedProductCategory class="bg-light absolute w-full right-0 left-0 rounded-b-lg z-50"/>
         </div>
     </nav>
 </template>
-
-<style scoped lang="scss">
-.nav-bar {
-    &::before {
-        background: rgba(0, 0, 0, 0.6);
-        @apply fixed top-0 left-0 right-0 bottom-0 h-full;
-        content: '',
-    }
-}
-</style>
 
 <script setup lang="ts">
 import { ref } from 'vue';
