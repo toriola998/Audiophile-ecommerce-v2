@@ -8,7 +8,8 @@
             <NuxtLink to="/">
                 <img src="/images/shared/desktop/logo.svg" alt="Home - Audiophile" />
             </NuxtLink>
-
+            
+            <!--DESKTOP NAV LINKS--->
             <ul class="md:flex md:gap-10 my-12 lg:my-0 hidden">
                 <li class="text-center w-auto" v-for="(item, index) in links" :key="index">
                     <NuxtLink :to="item.link" class="text-light font-bold text-[13px]">{{ item.cta }}</NuxtLink>
@@ -19,10 +20,11 @@
                 <img src="/images/icons/cart.svg" alt="Cart" />>
             </button>
         </div>
-    
-        <!-- <div class="bg-light nav-bar z-40 relative">
-            <SharedProductCategory />
-        </div> -->
+        
+        <!--MOBILE NAV LINKS--->
+        <div class="nav-bar z-40 relative">
+            <SharedProductCategory class="bg-light absolute w-full right-0 left-0 rounded-b-lg"/>
+        </div>
     </nav>
 </template>
 
@@ -30,7 +32,7 @@
 .nav-bar {
     &::before {
         background: rgba(0, 0, 0, 0.6);
-        @apply fixed px-5 top-0 left-0 right-0 bottom-0 z-10 h-full;
+        @apply fixed top-0 left-0 right-0 bottom-0 h-full;
         content: '',
     }
 }
