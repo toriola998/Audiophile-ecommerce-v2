@@ -14,20 +14,19 @@
             <h2 class="font-bold text-[1.75rem] md:text-[2.2rem] pt-6 uppercase lg:max-w-[300px]">{{ product.name }}</h2>
             <p class="opacity-50 text-[15px] md:text-[1rem] leading-6 mp-6 lg:py-8">{{ product.description }}</p>
             <div class="flex justify-center lg:justify-start mt-2">
-                <SharedButtonLink cta-link="/" cta-text="SEE PRODUCT" class="orange btn-link"/>
+                <SharedButtonLink :cta-link="`/product/${product.slug}`" cta-text="SEE PRODUCT" class="orange btn-link"/>
             </div>
         </div>
     </section>
 </template>
 
-<script setup lang="ts">
-// defineProps({
-//     product:{
-//         type: Object,
-//         default: () => {},
-//     },
-// })
-defineProps([ 'product' ])
+<script setup>
+defineProps({
+    product:{
+        type: Object,
+        default: () => {},
+    },
+})
 </script>
 
 <style scoped lang="scss">

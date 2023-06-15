@@ -15,7 +15,7 @@
                     <h2 class="font-bold text-[2.2rem] md:text-[3.4rem] leading-10 md:leading-[3.5rem]">ZX9 <br> SPEAKER</h2>
                     <p class="font-medium py-6 opacity-75 text-[15px]">Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                     <div class="flex justify-center lg:justify-start">
-                        <SharedButtonLink cta-link="/" cta-text="SEE PRODUCT" class="black btn-link"/>
+                        <SharedButtonLink cta-link="/product/zx9-speaker" cta-text="SEE PRODUCT" class="black btn-link"/>
                     </div>
                 </div>
             </div>

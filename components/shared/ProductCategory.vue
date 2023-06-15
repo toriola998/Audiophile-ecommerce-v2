@@ -27,17 +27,17 @@ import { ref } from 'vue';
 const products = ref([
     {
         product: 'HEADPHONES',
-        link: '/',
+        link: '/headphones',
         image: 'image-category-thumbnail-headphones'
     },
     {
         product: 'SPEAKERS',
-        link: '/',
+        link: '/speakers',
         image: 'image-category-thumbnail-speakers'
     },
     {
         product: 'EARPHONES',
-        link: '/',
+        link: '/earphones',
         image: 'image-category-thumbnail-earphones'
     }
 ]).value

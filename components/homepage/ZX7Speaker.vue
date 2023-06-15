@@ -3,7 +3,7 @@
         <div class="container">
             <div>
                 <h2 class="text-[1.75rem] font-bold mb-7">ZX7 SPEAKER</h2>
-                <SharedButtonLink cta-link="/" cta-text="SEE PRODUCT" class="outlined-black btn-link"/>
+                <SharedButtonLink cta-link="/product/zx7-speaker" cta-text="SEE PRODUCT" class="outlined-black btn-link"/>
             </div>
         </div>
     </section>

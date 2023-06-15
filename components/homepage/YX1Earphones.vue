@@ -13,7 +13,7 @@
             <div class="bg-grey-1 rounded-lg px-7 py-10 flex items-center">
                 <div>
                     <h2 class="text-[1.75rem] font-bold mb-7">YX1 EARPHONES</h2>
-                    <SharedButtonLink cta-link="/" cta-text="SEE PRODUCT" class="outlined-black btn-link"/>
+                    <SharedButtonLink cta-link="/product/yx1-earphones" cta-text="SEE PRODUCT" class="outlined-black btn-link"/>
                 </div>
             </div>
         </div>

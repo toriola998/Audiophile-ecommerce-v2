@@ -12,7 +12,7 @@
                 <h3 class="uppercase my-7">{{ item.name }}</h3>
                 <div class="flex justify-center">
                     <SharedButtonLink 
-                        :cta-link="`/product-details/${item.slug}`" 
+                        :cta-link="`/product/${item.slug}`" 
                         cta-text="SEE PRODUCT" 
                         class="orange btn-link" 
                     />

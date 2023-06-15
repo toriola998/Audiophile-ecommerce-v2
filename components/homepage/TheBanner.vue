@@ -9,7 +9,7 @@
             </h1>
             <p class="opacity-75 mb-7">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
             <div class="flex justify-center lg:justify-start">
-                <SharedButtonLink cta-link="/" cta-text="SEE PRODUCT" class="orange btn-link"/>
+                <SharedButtonLink cta-link="/product/xx99-mark-two-headphones" cta-text="SEE PRODUCT" class="orange btn-link"/>
             </div>
         </div>
     </div>
