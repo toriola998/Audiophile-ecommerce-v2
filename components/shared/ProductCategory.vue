@@ -13,7 +13,7 @@
                 <p class="font-bold text-center mb-4">{{ item.product  }}</p>
 
                 <NuxtLink :to="item.link" class="flex items-center gap-3 justify-center">
-                    <span class="opacity-50 font-bold text-[0.8rem]">SHOP</span> 
+                    <span class="opacity-50 font-bold text-[0.8rem] hover:text-deep-orange hover:opacity-100">SHOP</span> 
                     <img src="/images/shared/desktop/icon-arrow-right.svg" alt="" role="presentation" />
                 </NuxtLink>
             </div>

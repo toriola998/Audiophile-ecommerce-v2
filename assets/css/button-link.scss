@@ -1,16 +1,32 @@
 .btn-link {
     @apply text-[.81rem] font-bold py-3 inline-flex px-8;
 
+    &:hover {
+        transition: all 0.2s ease-in-out;
+    }
+
     &.outlined-black {
         border: 2px solid black;
         color: black;
+
+        &:hover {
+            @apply bg-black text-light;
+        }
     }
 
     &.orange {
         @apply bg-deep-orange text-light;
+
+        &:hover {
+            @apply bg-light-orange;
+        }
     }
 
     &.black {
         @apply bg-black text-light;
+
+        &:hover {
+            @apply bg-dark-2;
+        }
     }
 }

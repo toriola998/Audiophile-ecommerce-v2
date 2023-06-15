@@ -7,9 +7,9 @@
                 </NuxtLink>
 
                 <nav>
-                    <ul class="flex flex-col gap-5 md:gap-10 my-12 sm:flex-row lg:my-0 ">
+                    <ul class="flex flex-col gap-5 md:gap-10 my-12 sm:flex-row lg:my-0">
                         <li class="text-center w-auto" v-for="(item, index) in links" :key="index">
-                            <NuxtLink :to="item.link" class="text-light font-bold text-[13px]">{{ item.cta }}</NuxtLink>
+                            <NuxtLink :to="item.link" class="text-light font-bold text-[13px] hover:text-deep-orange">{{ item.cta }}</NuxtLink>
                         </li>
                     </ul>
                 </nav>
@@ -50,6 +50,11 @@ footer {
 
     .social-icons {
         @apply lg:relative -top-16 right-0;
+
+        img:hover {
+            //filter: sepia(100%) hue-rotate(-90deg);
+            cursor: pointer;
+        }
     }
 }
 </style>

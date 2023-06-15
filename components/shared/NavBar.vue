@@ -12,7 +12,7 @@
             <!--DESKTOP NAV LINKS--->
             <ul class="md:flex md:gap-10 my-12 lg:my-0 hidden">
                 <li class="text-center w-auto" v-for="(item, index) in links" :key="index">
-                    <NuxtLink :to="item.link" class="text-light font-bold text-[13px]">{{ item.cta }}</NuxtLink>
+                    <NuxtLink :to="item.link" class="text-light font-bold text-[13px] hover:text-deep-orange">{{ item.cta }}</NuxtLink>
                 </li>
             </ul>
 
