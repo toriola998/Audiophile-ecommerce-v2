@@ -23,31 +23,14 @@
         
         <!--MOBILE NAV LINKS--->
         <div class="md:hidden">
-            <div class="overlay"></div>
+            <div class="overlay" />
             <SharedProductCategory class="bg-light absolute w-full right-0 left-0 rounded-b-lg z-50"/>
         </div>
     </nav>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue';
+<script setup>
+import { useNavLinks } from '~/composables/useNavLinks';
 
-const links = ref([
-    {
-        cta: 'HOMES',
-        link: '/',
-    },
-    {
-        cta: 'HEADPHONES',
-        link: '/',
-    },
-    {
-        cta: 'SPEAKERS',
-        link: '/',
-    },
-    {
-        cta: 'EARPHONES',
-        link: '/',
-    }
-]).value
+const { links } = useNavLinks();
 </script>
