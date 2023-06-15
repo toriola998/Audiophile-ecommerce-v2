@@ -8,15 +8,15 @@ export function useNavLinks () {
         },
         {
             cta: 'HEADPHONES',
-            link: '/',
+            link: '/headphones',
         },
         {
             cta: 'SPEAKERS',
-            link: '/',
+            link: '/speakers',
         },
         {
             cta: 'EARPHONES',
-            link: '/',
+            link: '/earphones',
         }
     ]).value
 

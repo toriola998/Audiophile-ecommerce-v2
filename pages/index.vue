@@ -1,5 +1,5 @@
 <template>
-   <SharedNavBar />
+   <SharedNavBar bg-color="bg-dark-1"/>
    <HomepageTheBanner />
    <main>
       <SharedProductCategory />

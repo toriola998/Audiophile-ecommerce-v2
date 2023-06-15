@@ -1,5 +1,5 @@
 <template>
-    <nav class="px-5 h-[90px] bg-dark-1 z-40 w-full">
+    <nav class="px-5 h-[90px] z-40 w-full" :class="bgColor">
         <div class="flex justify-between h-[inherit] items-center border-b border-grey-4 container">
             <button class="md:hidden">
                 <img src="/images/shared/tablet/icon-hamburger.svg" alt="" height="16" width="16"/>
@@ -12,7 +12,12 @@
             <!--DESKTOP NAV LINKS--->
             <ul class="md:flex md:gap-10 my-12 lg:my-0 hidden">
                 <li class="text-center w-auto" v-for="(item, index) in links" :key="index">
-                    <NuxtLink :to="item.link" class="text-light font-bold text-[13px] hover:text-deep-orange">{{ item.cta }}</NuxtLink>
+                    <NuxtLink 
+                        :to="item.link" 
+                        class="text-light font-bold text-[13px] hover:text-deep-orange"
+                        >
+                        {{ item.cta }}
+                    </NuxtLink>
                 </li>
             </ul>
 
@@ -31,6 +36,12 @@
 
 <script setup>
 import { useNavLinks } from '~/composables/useNavLinks';
-
 const { links } = useNavLinks();
+
+defineProps({
+    bgColor:{
+        type: String,
+        default: 'bg-black',
+    },
+})
 </script>

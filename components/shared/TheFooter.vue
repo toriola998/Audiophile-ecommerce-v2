@@ -18,11 +18,11 @@
             <p class="md:max-w-[540px]">Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted 
             to helping you get the most out of personal audio. Come and visit our demo facility - we're open 7 days a week.</p>
             <div class="sm:flex justify-between items-center sm:mt-20">
-                <p class="font-bold py-12 sm:py-0">Copyright 2021. All Rights Reserved</p>
+                <p class="font-bold py-12 sm:py-0">Copyright {{ new Date().getFullYear() }}. All Rights Reserved</p>
                 <div class="flex justify-center gap-5 sm:justify-start social-icons">
-                    <img src="/images/shared/desktop/icon-facebook.svg" alt="" />
-                    <img src="/images/shared/desktop/icon-twitter.svg" alt="" />
-                    <img src="/images/shared/desktop/icon-instagram.svg" alt="" />
+                    <NuxtLink to="" v-for="(item, index) in socialLinks" :key="index">
+                        <img :src="`/images/shared/desktop/icon-${item}.svg`" :alt="`Follow audiophile on ${item}`" />
+                    </NuxtLink>
                 </div>
             </div>
         </div>
@@ -30,9 +30,11 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useNavLinks } from '~/composables/useNavLinks';
-
 const { links } = useNavLinks();
+
+const socialLinks = ref([ 'facebook', 'twitter', 'instagram', ]).value
 </script>
 
 <style scoped lang="scss">
