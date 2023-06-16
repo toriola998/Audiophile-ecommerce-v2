@@ -16,13 +16,30 @@
                 <p class="opacity-50 text-[15px] md:text-[1rem] leading-6 mt-6 lg:mb-10">{{ product.description }}</p>
                 <p class="font-bold text-[1.12rem] my-8">$ {{ product.price }}</p>
                 
-                <SharedAddToCart />
+                <!-- <SharedAddToCart /> -->
+                <div class="flex gap-3">
+                    <div class="flex justify-between items-center bg-grey-1 px-4 w-28">
+                        <button class="text-sm opacity-25" @click="decrement()">-</button>
+                        <p>{{ quantity  }}</p>
+                        <button class="text-sm opacity-25" @click="increment()">+</button>
+                    </div>
+                    <button class="orange btn-link">ADD TO CART</button>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
-<script setup >
+<script setup>
+//import { ref } from 'vue';
+import { useCartStore } from '~/store/cart'
+import { storeToRefs } from 'pinia'
+
+const store = useCartStore();
+const { quantity } = storeToRefs(store)
+const { decrement } = store;
+const {  increment } = store
+
 defineProps({
     product:{
         type: Object,

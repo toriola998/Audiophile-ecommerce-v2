@@ -1,10 +1,20 @@
 import { defineStore } from 'pinia'
 
 export const useCartStore = defineStore('cartStore', () => {
-  const filtersList = ref(['youtube', 'twitch'])
+    let quantity = ref(0)
+    function decrement() {
+        if(quantity.value !== 0) {
+            quantity.value--
+        }else {
+            return 0;
+        }
+    }
 
-  function addValueToFilterList(value) {
-    filtersList.value.push(value)
-  }
-  return { addValueToFilterList, filtersList }
+    function increment() {
+        quantity.value++
+    }
+
+return {
+    quantity, increment, decrement
+}
 })
