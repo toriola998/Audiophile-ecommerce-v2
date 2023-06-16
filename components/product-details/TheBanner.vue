@@ -23,7 +23,7 @@
                         <p>{{ quantity  }}</p>
                         <button class="text-sm opacity-25" @click="increment()">+</button>
                     </div>
-                    <button class="orange btn-link">ADD TO CART</button>
+                    <button class="orange btn-link" @click="addToCart(payload)">ADD TO CART</button>
                 </div>
             </div>
         </div>
@@ -31,19 +31,31 @@
 </template>
 
 <script setup>
-//import { ref } from 'vue';
+import { reactive } from 'vue';
 import { useCartStore } from '~/store/cart'
 import { storeToRefs } from 'pinia'
+
+const props = defineProps({
+    product:{
+        type: Object,
+        default: () => {},
+    },
+})
 
 const store = useCartStore();
 const { quantity } = storeToRefs(store)
 const { decrement } = store;
 const {  increment } = store
 
-defineProps({
-    product:{
-        type: Object,
-        default: () => {},
-    },
+const { addToCart } = store
+const { cart } = storeToRefs(store)
+console.log(cart)
+
+let payload = reactive({
+    id: props.product.id,
+    quantity: quantity,
+    name: props.product.name,
+    price: props.product.price,
+    image: props.product.slug
 })
 </script>

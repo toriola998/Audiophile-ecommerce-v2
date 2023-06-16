@@ -23,9 +23,10 @@
                 </li>
             </ul>
 
-            <button class="flex items-center">
+            <button class="flex items-center" @click="showCart = true">
                 <img src="/images/icons/cart.svg" alt="Cart" />>
             </button>
+            <CartDetails v-if="showCart === true" @close="showCart = false"/>
         </div>
         
         <!--MOBILE NAV LINKS--->
@@ -42,6 +43,7 @@ import { useNavLinks } from '~/composables/useNavLinks';
 const { links } = useNavLinks();
 
 let showNav = ref(null);
+let showCart = ref(null);
 
 defineProps({
     bgColor:{
