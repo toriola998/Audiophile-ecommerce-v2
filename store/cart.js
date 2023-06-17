@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useCartStore = defineStore('cartStore', () => {
     //INCREMENT/DECREMENT OF PRODUCT QUANTITY
     function decrement(payload) {
-        if(payload.quantity.value !== 0) {
+        if(payload.quantity !== 0) {
             payload.quantity--
         }else {
             return 0;
@@ -27,7 +27,12 @@ export const useCartStore = defineStore('cartStore', () => {
         }
     }
 
+    //REMOVE ALL PRODUCTS FROM CART
+    function removeAll() {
+        cart.value = [];
+    }
+
     return {
-        increment, decrement, cart, addToCart
+        increment, decrement, cart, addToCart, removeAll
     }
 })

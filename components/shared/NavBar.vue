@@ -23,7 +23,8 @@
                 </li>
             </ul>
 
-            <button class="flex items-center" @click="showCart = true">
+            <button class="flex items-center relative" @click="showCart = true">
+                <span v-if="cart.length >=1" class="bg-deep-orange rounded-full text-light px-[7px] text-sm absolute -top-4 right-0">{{ cart.length }}</span>
                 <img src="/images/icons/cart.svg" alt="Cart" />>
             </button>
             <CartDetails v-if="showCart === true" @close="showCart = false"/>
@@ -40,6 +41,13 @@
 <script setup>
 import { ref } from 'vue';
 import { useNavLinks } from '~/composables/useNavLinks';
+import { useCartStore } from '~/store/cart'
+import { storeToRefs } from 'pinia'
+
+const store = useCartStore();
+const { cart } = storeToRefs(store)
+
+//From a composable
 const { links } = useNavLinks();
 
 let showNav = ref(null);
