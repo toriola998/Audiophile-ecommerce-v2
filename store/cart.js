@@ -31,13 +31,35 @@ export const useCartStore = defineStore('cartStore', () => {
         payload.quantity++;
     }
 
+    //TOTAL AMOUNT
     const cartTotalAmount =  computed(() => {
         return cart.value.reduce((total, product) => {
             return total + (product.price * product.quantity);
         }, 0);
     })
 
+    const vat = 20/100
+    const shippingFee = ref(50)
+
+    //VAT 
+    const vatFee = computed(() => {
+        return Math.floor(vat * cartTotalAmount.value);
+    })
+
+    //GRAND TOTAL
+    const grandTotalAmount = computed(() => {
+        return (cartTotalAmount.value + shippingFee.value + vatFee.value);
+    })
+
     return {
-        increment, decrement, cart, addToCart, removeAll, cartTotalAmount
+        increment, 
+        decrement, 
+        cart, 
+        addToCart, 
+        removeAll, 
+        cartTotalAmount, 
+        vatFee,
+        shippingFee, 
+        grandTotalAmount
     }
 })

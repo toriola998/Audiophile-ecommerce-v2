@@ -26,7 +26,7 @@
                         <span class="font-bold text-[1.1rem]">$ {{ cartTotalAmount  }}</span>
                     </p>
 
-                    <button-link class="orange btn-link w-full flex justify-center">CHECKOUT</button-link>
+                    <button-link class="orange btn-link w-full flex justify-center" @click="$router.push('/checkout')">CHECKOUT</button-link>
                 </div>
             </div>
         </div>
