@@ -19,9 +19,9 @@
                 <!-- <SharedAddToCart /> -->
                 <div class="flex gap-3">
                     <div class="flex justify-between items-center bg-grey-1 px-4 w-28">
-                        <button class="text-sm opacity-25" @click="decrement()">-</button>
-                        <p>{{ quantity  }}</p>
-                        <button class="text-sm opacity-25" @click="increment()">+</button>
+                        <button class="text-sm opacity-25" @click="decrement(payload)">-</button>
+                        <p>{{ payload.quantity  }}</p>
+                        <button class="text-sm opacity-25" @click="increment(payload)">+</button>
                     </div>
                     <button class="orange btn-link" @click="addToCart(payload)">ADD TO CART</button>
                 </div>
@@ -43,7 +43,7 @@ const props = defineProps({
 })
 
 const store = useCartStore();
-const { quantity } = storeToRefs(store)
+//const { quantity } = storeToRefs(store)
 const { decrement } = store;
 const {  increment } = store
 
@@ -53,7 +53,7 @@ console.log(cart)
 
 let payload = reactive({
     id: props.product.id,
-    quantity: quantity,
+    quantity: 0,
     name: props.product.name,
     price: props.product.price,
     image: props.product.slug

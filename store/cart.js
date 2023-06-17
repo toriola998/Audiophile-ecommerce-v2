@@ -1,18 +1,16 @@
 import { defineStore } from 'pinia'
 
 export const useCartStore = defineStore('cartStore', () => {
-
     //INCREMENT/DECREMENT OF PRODUCT QUANTITY
-    let quantity = ref(0);
-    function decrement() {
-        if(quantity.value !== 0) {
-            quantity.value--
+    function decrement(payload) {
+        if(payload.quantity.value !== 0) {
+            payload.quantity--
         }else {
             return 0;
         }
     }
-    function increment() {
-        quantity.value++
+    function increment(payload) {
+        payload.quantity++
     }
 
     //ADDING PRODUCT TO CART
@@ -27,10 +25,9 @@ export const useCartStore = defineStore('cartStore', () => {
             console.log('not there')
             cart.value.push(payload);
         }
-       // cart.value.push(payload)
     }
 
     return {
-        quantity, increment, decrement, cart, addToCart
+        increment, decrement, cart, addToCart
     }
 })

@@ -8,9 +8,9 @@
 
             <CartProduct v-for="(item, index) in cart" :key="index" :product="item">
                 <div class="flex justify-between items-center bg-grey-1 px-4 py-2 w-28">
-                    <button class="text-sm opacity-25" @click="decrement()">-</button>
-                    <p class="font-bold">{{ quantity  }}</p>
-                    <button class="text-sm opacity-25" @click="increment()">+</button>
+                    <button class="text-sm opacity-25" @click="decrement(item)">-</button>
+                    <p class="font-bold">{{ item.quantity  }}</p>
+                    <button class="text-sm opacity-25" @click="increment(item)">+</button>
                 </div>
             </CartProduct>
             
@@ -25,7 +25,6 @@
 </template>
 
 <script setup>
-//import { reactive } from 'vue';
 import { useCartStore } from '~/store/cart'
 import { storeToRefs } from 'pinia'
 
@@ -37,18 +36,9 @@ const props = defineProps({
 })
 
 const store = useCartStore();
-const { quantity } = storeToRefs(store)
 const { decrement } = store;
 const {  increment } = store
 
-// const { addToCart } = store
 const { cart } = storeToRefs(store)
 console.log(cart)
-
-// let payload = reactive({
-//     id: props.product.id,
-//     quantity: quantity,
-//     name: props.product.name,
-//     price: props.product.price,
-// })
 </script>
