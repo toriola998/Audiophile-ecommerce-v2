@@ -43,7 +43,6 @@ const props = defineProps({
 })
 
 const store = useCartStore();
-//const { quantity } = storeToRefs(store)
 const { decrement } = store;
 const {  increment } = store
 
@@ -53,7 +52,7 @@ console.log(cart)
 
 let payload = reactive({
     id: props.product.id,
-    quantity: 0,
+    quantity: 1,
     name: props.product.name,
     price: props.product.price,
     image: props.product.slug

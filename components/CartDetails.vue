@@ -23,7 +23,7 @@
                     
                     <p class="mt-8 mb-7 flex justify-between">
                         <span class="font-medium opacity-50 text-dark text-[.93rem]">TOTAL</span>
-                        <span class="font-bold text-[1.1rem]">$ 5,396</span>
+                        <span class="font-bold text-[1.1rem]">$ {{ cartTotalAmount  }}</span>
                     </p>
 
                     <button-link class="orange btn-link w-full flex justify-center">CHECKOUT</button-link>
@@ -49,6 +49,7 @@ const { decrement } = store;
 const {  increment } = store
 const {  removeAll } = store
 
-const { cart } = storeToRefs(store)
+const { cart } = storeToRefs(store);
+const { cartTotalAmount } = storeToRefs(store);
 console.log(cart)
 </script>
