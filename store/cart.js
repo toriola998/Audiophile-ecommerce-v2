@@ -25,6 +25,14 @@ export const useCartStore = defineStore('cartStore', () => {
         }else {
             return 0;
         }
+        
+        //IF THE PRODUCT IS IN THE CART AND THE QUANITY IS 1,IF THE DECREMENT IS CLICKED, REMOVE IT FROM THE ARRAY
+        if (payload.quantity === 0  && cart.value.includes(payload)) {
+            let index = cart.value.findIndex(item => item === payload); // Find the index of the item
+            if (index !== -1) {
+                cart.value.splice(index, 1); // Remove the item at the found index
+            }
+        }    
     }
 
     function increment(payload) {
