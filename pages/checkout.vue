@@ -2,7 +2,7 @@
     <main class="bg-grey-2 pb-20">
         <GoBack />
         <div class="px-5">
-            <div class="container flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-5">
+            <form class="container flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-5" @click="submit()">
                 <div class="rounded-lg bg-light py-5 lg:p-10 px-5 lg:w-[65%]">
                     <h1 class="text-[1.5rem] md:text-[2rem] pb-7 font-bold">CHECKOUT</h1>
                     
@@ -36,13 +36,13 @@
                 </div>
 
                 <OrderSummary class="lg:w-[30%]"/>
-            </div>
+            </form>
         </div>
     </main>
     <SharedTheFooter />
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const billingDetails = ref([
@@ -52,6 +52,7 @@ const billingDetails = ref([
         type: 'text',
         id: 'name',
         value: '',
+        isError: false,
     },
     {
         label: 'Email Address',
@@ -59,6 +60,7 @@ const billingDetails = ref([
         type: 'text',
         id: 'email',
         value: '',
+        isError: false,
     },
     {
         label: 'Phone number',
@@ -66,6 +68,7 @@ const billingDetails = ref([
         type: 'number',
         id: 'phone-number',
         value: '',
+        isError: false,
     }
 ]).value
 
@@ -76,6 +79,7 @@ const shippingInfo = ref([
         type: 'text',
         id: 'address',
         value: '',
+        isError: false,
     },
     {
         label: 'ZIP Code',
@@ -83,6 +87,7 @@ const shippingInfo = ref([
         type: 'number',
         id: 'zip-code',
         value: '',
+        isError: false,
     },
     {
         label: 'City',
@@ -90,6 +95,7 @@ const shippingInfo = ref([
         type: 'type',
         id: 'city',
         value: '',
+        isError: false,
     },
     {
         label: 'Country',
@@ -97,6 +103,7 @@ const shippingInfo = ref([
         type: 'text',
         id: 'country',
         value: '',
+        isError: false,
     }
 ]).value
 
@@ -129,6 +136,18 @@ const paymentMethods = ref([
         value: '',
     },
 ]).value
+
+function submit() {
+    let billingAndShippingDetails = [...billingDetails, ...shippingInfo]
+
+    billingAndShippingDetails.forEach( (item) => {
+        if(item.value === '') {
+            item.isError = true;
+        }else {
+            item.isError = false;
+        }
+    })
+}
 </script>
 
 <style scoped lang="scss">
