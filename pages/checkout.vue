@@ -1,8 +1,9 @@
 <template>
+    <SharedNavBar />
     <main class="bg-grey-2 pb-20">
         <GoBack />
         <div class="px-5">
-            <form class="container flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-5" @click="submit()">
+            <form class="container flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-5">
                 <div class="rounded-lg bg-light py-5 lg:p-10 px-5 lg:w-[65%]">
                     <h1 class="text-[1.5rem] md:text-[2rem] pb-7 font-bold">CHECKOUT</h1>
                     
@@ -18,15 +19,19 @@
                             <p class="font-bold text-[0.75rem] my-4">Payment Methods</p>
                             <div>
                                 <div class="mb-4 items-center flex gap-2 input-wrap " v-for="(item, index) in paymentDetails" :key="index">
-                                    <input :id="item.id" type="radio" class="radio-input"/>
+                                    <input :id="item.id" type="radio" class="radio-input" v-model="payment" :value="item.id"/>
                                     <label :for="item.id" class="font-bold text-sm">{{ item.label }}</label><br>
                                 </div>
                             </div>
                         </div>
 
-                        <CheckoutDetails :details="paymentMethods" class="sm:grid grid-cols-2 gap-x-4 mt-2"/>
+                        <CheckoutDetails 
+                            :details="paymentMethods" 
+                            class="sm:grid grid-cols-2 gap-x-4 mt-2"
+                            v-if="payment === 'e-Money'"
+                        />
 
-                        <div class="flex flex-col gap-3 mt-8 sm:flex-row sm:gap-8 sm:items-center">
+                        <div class="flex flex-col gap-3 mt-8 sm:flex-row sm:gap-8 sm:items-center"  v-if="payment === 'cash-on-delivery'">
                             <img src="/images/Shape.png" alt="" role="presentation" height="48" width="48" />
                             <p class="opacity-50 text-[.95rem]">The 'Cash on Delivery' option enables you to pay in cash when our delivery 
                             courier arrives at your residence. Just make sure your address is correct so 
@@ -35,8 +40,9 @@
                     </div>
                 </div>
 
-                <OrderSummary class="lg:w-[30%]"/>
+                <OrderSummary class="lg:w-[30%]" @submit="submit()"/>
             </form>
+            <ThankYouCard v-if="pay === true"/>
         </div>
     </main>
     <SharedTheFooter />
@@ -44,6 +50,10 @@
 
 <script setup>
 import { ref } from 'vue';
+const payment = ref('e-Money')
+let pay = ref(false)
+//let pay = false;
+console.log(pay.value)
 
 const billingDetails = ref([
     {
@@ -109,9 +119,9 @@ const shippingInfo = ref([
 
 const paymentDetails = ref([
     {
-        label: 'e-Money',
+        label: 'e Money',
         value: '',
-        id: 'payment-method'
+        id: 'e-Money'
     },
     {
         label: 'Cash on Delivery',
@@ -127,6 +137,7 @@ const paymentMethods = ref([
         type: 'number',
         id: 'e-money-number',
         value: '',
+        isError: false,
     },
     {
         label: 'e-Money PIN',
@@ -134,17 +145,23 @@ const paymentMethods = ref([
         type: 'number',
         id: 'e-money-pin',
         value: '',
+        isError: false,
     },
 ]).value
 
 function submit() {
-    let billingAndShippingDetails = [...billingDetails, ...shippingInfo]
+    let checkoutDetails = [...billingDetails, ...shippingInfo, ...paymentMethods]
 
-    billingAndShippingDetails.forEach( (item) => {
+    checkoutDetails.forEach( (item) => {
         if(item.value === '') {
             item.isError = true;
+            pay.value = false;
         }else {
             item.isError = false;
+        }
+
+        if (!checkoutDetails.some((item) => item.value === '')) {
+            pay.value = true;  // Set pay to true if no item value is empty
         }
     })
 }

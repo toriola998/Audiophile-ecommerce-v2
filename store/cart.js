@@ -51,6 +51,12 @@ export const useCartStore = defineStore('cartStore', () => {
         return (cartTotalAmount.value + shippingFee.value + vatFee.value);
     })
 
+    const router = useRouter();
+    function goHome() {
+        router.push('/')
+        cart.value = [];
+    }
+
     return {
         increment, 
         decrement, 
@@ -60,6 +66,7 @@ export const useCartStore = defineStore('cartStore', () => {
         cartTotalAmount, 
         vatFee,
         shippingFee, 
-        grandTotalAmount
+        grandTotalAmount,
+        goHome
     }
 })

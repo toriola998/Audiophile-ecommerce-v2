@@ -25,7 +25,7 @@
             </li>
         </ul>
 
-        <button-link class="orange btn-link w-full flex justify-center mt-8" type="button">CONTINUE & PAY</button-link>
+        <button-link class="orange btn-link w-full flex justify-center mt-8" type="submit" @click="$emit('submit')">CONTINUE & PAY</button-link>
     </div>
 </template>
 
