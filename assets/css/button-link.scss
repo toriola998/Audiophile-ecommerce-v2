@@ -1,5 +1,6 @@
 .btn-link {
     @apply text-[.81rem] font-bold py-3 inline-flex px-8;
+    cursor: pointer;
 
     &:hover {
         transition: all 0.2s ease-in-out;
